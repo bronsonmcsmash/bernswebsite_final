@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:wght@200;400;600;800&display=swap" rel="stylesheet" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src https://fonts.gstatic.com; img-src 'self' https://img.youtube.com; connect-src https://formspree.io; frame-src 'none';" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -206,8 +207,8 @@
         <h2 class="section-title">Let's Work Together.</h2>
         <p>Available for video editing, post-production, AI video projects, and creative collaboration. Reach out directly or through my agent.</p>
         <ul class="contact-details">
-          <li><strong>Direct</strong><a href="mailto:b.mcburnie@gmail.com">b.mcburnie@gmail.com</a></li>
-          <li><strong>Agent</strong><a href="mailto:sam@rmk.com.au">Sam Downs — RMK, Sydney</a></li>
+          <li><strong>Direct</strong><a href="#" class="email-link" data-user="b.mcburnie" data-domain="gmail.com"></a></li>
+          <li><strong>Agent</strong><a href="#" class="email-link" data-user="sam" data-domain="rmk.com.au" data-label="Sam Downs — RMK, Sydney"></a></li>
           <li><strong>Location</strong><span>Sydney, Australia</span></li>
           <li><strong>Availability</strong><span>Open to projects — 2026</span></li>
         </ul>
@@ -217,17 +218,18 @@
           <div class="reference-item">
             <strong>Sam Downs</strong>
             <span>Agent, RMK, Sydney</span>
-            <a href="mailto:sam@rmk.com.au">sam@rmk.com.au</a>
+            <a href="#" class="email-link" data-user="sam" data-domain="rmk.com.au"></a>
           </div>
           <div class="reference-item">
             <strong>Jimmy Foggo</strong>
             <span>Content Producer, Eureka, Sydney</span>
-            <a href="mailto:Jimmy.foggo@eurekagroup.tv">Jimmy.foggo@eurekagroup.tv</a>
+            <a href="#" class="email-link" data-user="Jimmy.foggo" data-domain="eurekagroup.tv"></a>
           </div>
         </div>
       </div>
 
       <form class="contact-form" action="https://formspree.io/f/myknlqne" method="POST">
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
         <div class="form-group">
           <label for="name">Name</label>
           <input type="text" id="name" name="name" placeholder="Your name" required />

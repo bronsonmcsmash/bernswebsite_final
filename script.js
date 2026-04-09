@@ -51,6 +51,15 @@ form.addEventListener('submit', e => {
   });
 });
 
+// Deobfuscate email links (keeps addresses out of raw HTML for spam bots)
+document.querySelectorAll('.email-link').forEach(link => {
+  const user = link.dataset.user;
+  const domain = link.dataset.domain;
+  const email = user + '@' + domain;
+  link.href = 'mailto:' + email;
+  link.textContent = link.dataset.label || email;
+});
+
 // Staggered scroll-reveal animations
 const reveal = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
