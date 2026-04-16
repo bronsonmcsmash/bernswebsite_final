@@ -229,6 +229,8 @@ ul { list-style: none; }
   font-size: 1.4rem;
   cursor: pointer;
   color: var(--color-text);
+  padding: 0.5rem;
+  flex-shrink: 0;
 }
 
 /* ==========================================
